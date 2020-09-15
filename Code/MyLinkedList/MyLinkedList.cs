@@ -36,13 +36,13 @@
         public void RemoveFirst()
         {
 
-            if (size == 0) {
+            if (this.size == 0) {
                 throw new MyLinkedListEmptyException();
             }
 
-            MyLinkedListNode<T> node = head.next;
-            head = node;
-            size--;
+            MyLinkedListNode<T> node = this.head.next;
+            this.head = node;
+            this.size--;
         }
 
         public int Size()
@@ -52,18 +52,18 @@
 
         public void Clear()
         {
-            head = null;
-            size = 0;
+            this.head = null;
+            this.size = 0;
         }
 
         public void Insert(int index, T data)
         {
-            if (index < 0 || index > size) {
+            if (index < 0 || index > this.size) {
                 throw new MyLinkedListIndexOutOfRangeException();
             }
 
             MyLinkedListNode<T> prevNode = null;
-            MyLinkedListNode<T> node = head;
+            MyLinkedListNode<T> node = this.head;
             MyLinkedListNode<T> newNode = new MyLinkedListNode<T>() {
                 data = data,
                 next = null,
@@ -79,7 +79,7 @@
                         newNode.next = prevNode.next;
                         prevNode.next = newNode;
                     }
-                    size++;
+                    this.size++;
                 }
 
                 if (node != null) {
@@ -93,14 +93,14 @@
         {
             string result = "NIL";
 
-            if (size > 0) {
+            if (this.size > 0) {
                 result = "[";
 
-                MyLinkedListNode<T> node = head;
-                for (int i = 0; i < size; i++) {
+                MyLinkedListNode<T> node = this.head;
+                for (int i = 0; i < this.size; i++) {
                     result += node.data;
 
-                    if (i < size - 1) {
+                    if (i < this.size - 1) {
                         result += ",";
                     }
 
