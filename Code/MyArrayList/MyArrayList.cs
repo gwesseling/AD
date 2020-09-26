@@ -2,14 +2,13 @@
 {
     public partial class MyArrayList : IMyArrayList
     {
-        private int capacity;
         private int[] data;
         private int size;
 
         public MyArrayList(int capacity)
         {
-            this.capacity = capacity;
-            this.Clear();
+            this.data = new int[capacity];
+            this.size = 0;
         }
 
         public void Add(int n)
@@ -18,13 +17,13 @@
                 throw new MyArrayListFullException();
             }
 
-            this.data[this.size] = n;
+            this.data[size] = n;
             this.size++;
         }
 
         public int Get(int index)
         {
-            if (index < 0 || index >= this.size) {
+            if (index < 0 || this.size == 0|| index > (size - 1)) {
                 throw new MyArrayListIndexOutOfRangeException();
             }
 
@@ -33,7 +32,7 @@
 
         public void Set(int index, int n)
         {
-            if (index < 0 || index >= this.size) {
+            if (index < 0 || index > (this.size - 1)) {
                 throw new MyArrayListIndexOutOfRangeException();
             }
 
@@ -52,7 +51,7 @@
 
         public void Clear()
         {
-            this.data = new int[this.capacity];
+            this.data = new int[this.data.GetLength(0)];
             this.size = 0;
         }
 

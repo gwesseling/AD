@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AD
+﻿namespace AD
 {
     public class Opgave2
     {
@@ -9,12 +7,7 @@ namespace AD
         private static long FibonacciRecursiveInternal(int n)
         {
             calls++;
-
-            if (n > 1) {
-                return FibonacciRecursiveInternal(n - 1) + FibonacciRecursiveInternal(n - 2);
-            }
-
-            return n;
+            throw new System.NotImplementedException();
         }
 
         public static long FibonacciRecursive(int n)
@@ -25,7 +18,7 @@ namespace AD
 
         private static long FibonacciIterativeInternal(int n)
         {
-            return (long)((Math.Pow(1 + Math.Sqrt(5), n) - Math.Pow(1 - Math.Sqrt(5), n)) / (Math.Pow(2, n) * Math.Sqrt(5)));
+            throw new System.NotImplementedException();
         }
 
         public static long FibonacciIterative(int n)

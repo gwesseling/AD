@@ -2,47 +2,31 @@ using System.Collections.Generic;
 
 namespace AD
 {
-    public partial class MyQueue<T> : IMyQueue<T> {
-
-        List<T> queue;
-
-        public MyQueue() {
-            this.Clear();
-        }
-
+    public partial class MyQueue<T> : IMyQueue<T>
+    {
         public bool IsEmpty()
         {
-            return this.queue.Count == 0;
+            throw new System.NotImplementedException();
         }
 
         public void Enqueue(T data)
         {
-            this.queue.Add(data);
+            throw new System.NotImplementedException();
         }
 
         public T GetFront()
         {
-            if (this.IsEmpty()) {
-                throw new MyQueueEmptyException();
-            }
-
-            return this.queue[0];
+            throw new System.NotImplementedException();
         }
 
         public T Dequeue()
         {
-            if (this.IsEmpty()) {
-                throw new MyQueueEmptyException();
-            }
-
-            T data = this.GetFront();
-            this.queue.RemoveAt(0);
-            return data;
+            throw new System.NotImplementedException();
         }
 
         public void Clear()
         {
-            this.queue = new List<T>();
+            throw new System.NotImplementedException();
         }
 
     }
