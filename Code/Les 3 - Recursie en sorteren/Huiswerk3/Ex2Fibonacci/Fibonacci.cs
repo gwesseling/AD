@@ -7,7 +7,12 @@
         private static long FibonacciRecursiveInternal(int n)
         {
             calls++;
-            throw new System.NotImplementedException();
+
+            if (n > 1) {
+                return FibonacciRecursiveInternal(n - 1) + FibonacciRecursiveInternal(n - 2);
+            }
+
+            return n;
         }
 
         public static long FibonacciRecursive(int n)
@@ -18,7 +23,7 @@
 
         private static long FibonacciIterativeInternal(int n)
         {
-            throw new System.NotImplementedException();
+            return (long)((Math.Pow(1 + Math.Sqrt(5), n) - Math.Pow(1 - Math.Sqrt(5), n)) / (Math.Pow(2, n) * Math.Sqrt(5)));
         }
 
         public static long FibonacciIterative(int n)
