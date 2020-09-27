@@ -7,11 +7,11 @@ namespace AD
     {
         public override void Sort(List<int> list)
         {
-            List<int> tmpArray = new List<int>();
+            int[] tmpArray = new int[list.Count];
             Sort(list, tmpArray, 0, list.Count - 1);
         }
 
-        private static void Sort(List<int> list, List<int> tmpArray, int left, int right) {
+        private static void Sort(List<int> list, int[] tmpArray, int left, int right) {
             if (left < right) {
                 int center = (left + right) / 2;
                 Sort(list, tmpArray, left, center);
@@ -20,7 +20,7 @@ namespace AD
             }
         }
 
-        private static void Merge(List<int> list, List<int> tmpArray, int left, int right, int rightEnd) {
+        private static void Merge(List<int> list, int[] tmpArray, int left, int right, int rightEnd) {
             int leftEnd = right - 1;
             int tmp = left;
             int numElements = rightEnd - left + 1;
