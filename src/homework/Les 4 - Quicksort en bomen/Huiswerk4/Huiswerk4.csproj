@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>AD</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\Datastructures\BinaryTree\BinaryNode.cs" Link="BinaryTree\BinaryNode.cs" />
+    <Compile Include="..\..\..\Datastructures\BinaryTree\BinaryTree.cs" Link="BinaryTree\BinaryTree.cs" />
+    <Compile Include="..\..\..\Datastructures\BinaryTree\BinaryTreeBuilder.cs" Link="BinaryTree\BinaryTreeBuilder.cs" />
+    <Compile Include="..\..\..\Datastructures\BinaryTree\IBinaryTree.cs" Link="BinaryTree\IBinaryTree.cs" />
+    <Compile Include="..\..\..\Datastructures\FirstChildNextSibling\FCNSBuilder.cs" Link="FirstChildNextSibling\FCNSBuilder.cs" />
+    <Compile Include="..\..\..\Datastructures\FirstChildNextSibling\FCNSNode.cs" Link="FirstChildNextSibling\FCNSNode.cs" />
+    <Compile Include="..\..\..\Datastructures\FirstChildNextSibling\FirstChildNextSibling.cs" Link="FirstChildNextSibling\FirstChildNextSibling.cs" />
+    <Compile Include="..\..\..\Datastructures\FirstChildNextSibling\IFCNSNode.cs" Link="FirstChildNextSibling\IFCNSNode.cs" />
+    <Compile Include="..\..\..\Datastructures\FirstChildNextSibling\IFirstChildNextSibling.cs" Link="FirstChildNextSibling\IFirstChildNextSibling.cs" />
+    <Compile Include="..\..\..\Algorithms\Sorters\InsertionSort.cs" Link="Sorters\InsertionSort.cs" />
+    <Compile Include="..\..\..\Algorithms\Sorters\MergeSort.cs" Link="Sorters\MergeSort.cs" />
+    <Compile Include="..\..\..\Algorithms\Sorters\QuickSort.cs" Link="Sorters\QuickSort.cs" />
+    <Compile Include="..\..\..\Algorithms\Sorters\ShellSort.cs" Link="Sorters\ShellSort.cs" />
+    <Compile Include="..\..\..\Algorithms\Sorters\Sorter.cs" Link="Sorters\Sorter.cs" />
+    <Compile Include="..\..\..\Algorithms\Sorters\SorterBuilder.cs" Link="Sorters\SorterBuilder.cs" />
+  </ItemGroup>
+
+</Project>
