@@ -1,11 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 
 
 namespace AD
 {
-    public partial class Vertex : IVertex
+    public partial class Vertex : IVertex, IComparable<Vertex>
     {
         public string name;
         public LinkedList<Edge> adj;
@@ -89,6 +90,13 @@ namespace AD
             s += "]";
 
             return s;
+        }
+
+        public int CompareTo(Vertex other) {
+            double otherCost = other.distance;
+
+            return distance < otherCost ? -1 : distance > otherCost ? 1 : 0;
+            //return distance.CompareTo(other.distance);
         }
     }
 }

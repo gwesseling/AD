@@ -1,3 +1,6 @@
+using System;
+using System.Diagnostics.CodeAnalysis;
+
 namespace AD
 {
     public partial class Edge

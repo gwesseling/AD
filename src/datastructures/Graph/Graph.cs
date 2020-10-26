@@ -123,7 +123,7 @@ namespace AD
         /// <param name="name">The name of the starting vertex</param>
         public void Dijkstra(string name)
         {
-            PriorityQueue<Path> pq = new PriorityQueue<Path>();
+            PriorityQueue<Vertex> pq = new PriorityQueue<Vertex>();
 
             Vertex start = vertexMap[name];
 
@@ -132,13 +132,12 @@ namespace AD
             }
 
             ClearAll();
-            pq.Add(new Path(start, 0));
+            pq.Add(start);
             start.distance = 0;
 
             int nodeSeen = 0;
             while (!pq.IsEmpty() && nodeSeen < vertexMap.Count) {
-                Path vrec = pq.Remove();
-                Vertex v = vrec.dest;
+                Vertex v = pq.Remove();
 
                 if (v.known) {
                     continue;
@@ -158,13 +157,10 @@ namespace AD
                     if (w.distance > v.distance + cvw) {
                         w.distance = v.distance + cvw;
                         w.prev = v;
-                        pq.Add(new Path(w, w.distance));
+                        pq.Add(w);
                     }
                 }
-
-
             }
-
         }
 
         //----------------------------------------------------------------------
@@ -192,9 +188,6 @@ namespace AD
         //----------------------------------------------------------------------
         // Interface methods : methods that have to be implemented for homework
         //----------------------------------------------------------------------
-
-
-
         public bool IsConnected()
         {
             throw new System.NotImplementedException();
